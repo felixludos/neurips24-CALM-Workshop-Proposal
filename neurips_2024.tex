@@ -11,7 +11,7 @@
 
 % to compile a preprint version, e.g., for submission to arXiv, add add the
 % [preprint] option:
-\usepackage[preprint]{neurips_2024}
+% \usepackage[preprint]{neurips_2024}
 
 
 % to compile a camera-ready version, add the [final] option, e.g.:
@@ -19,9 +19,9 @@
 
 
 % to avoid loading the natbib package, add option nonatbib:
-%    \usepackage[nonatbib]{neurips_2024}
+   \usepackage[nonatbib,preprint]{neurips_2024}
 
-
+\usepackage[numbers]{natbib}
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
 \usepackage{hyperref}       % hyperlinks
@@ -79,7 +79,7 @@ Causality and Large Models (C\emoji{heart}LM)}
 
 
 \begin{abstract}
-[todo]
+[todo - based on topic section]
 \end{abstract}
 
 
@@ -112,11 +112,19 @@ By engaging both theoretical and applied perspectives, we aim to foster deep ins
 
 \section{Schedule and Speakers}
 
+We plan to hold a series of talks given by both up-and-coming as well as distinguished researchers with experience
+
+We are fortunate to draw our speakers and panelists not just from one, but from two thriving and diverse research communities: large-scale machine learning and causal inference.
+
+However, we also selected several notable researchers that focus on adjacent or applied fields to provide our attendees with insights in how state-of-the-art methods can rapidly and effectively be deployed to solve problems.
+
+features a distinguished group of speakers and panelists. We have invited  Matej Zečević (Speaker), Maria Antoniak (Panelist), Giambattista Parascandolo (Panelist, tentatively accepted), Elias Baremboim (Speaker), Jane X. Wang (Speaker), Claudia Shi (Speaker), Victor Veitch (Speaker), Amit Sharma (Speaker), Atticus Geiger (Panelist), Charlotte Bunne (Panelist), Chelsea Finn (Panelist), and Zhijing Jin (Panelist).
+
 [note on diversity]
 
-\subsection{Interactive Elements}
+% \subsection{Interactive Elements}
 
-[equipment needs]
+% [equipment needs]
 
 \section{Attendance}
 
@@ -143,15 +151,19 @@ Andrei Nicolicioiu is a PhD student at Mila and Université de Montréal, Canada
 
 \section{Selected References}
 
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+
+\nocite{liuLargeLanguageModels2024}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
+% \newpage
 
-\appendix
+% \appendix
 
-\section{Appendix / supplemental material}
+% \section{Appendix / supplemental material}
 
 
 
