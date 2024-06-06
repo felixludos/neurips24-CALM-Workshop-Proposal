@@ -87,33 +87,69 @@ Causality and Large Models (C\emoji{heart}LM)}
 
 \section{Topic}
 
-The remarkable capabilities and accessibility of recent large models, also known as ``foundation models'', have sparked significant interest and excitement in the research community and beyond. In particular, large pre-trained generative models have demonstrated remarkable competencies in understanding and generating human-like text, images, and more despite being trained on largely unstructured data using relatively simple self-supervised learning methods. This raises the question: \textit{Why do such large models work so well?} % for, in
+The remarkable capabilities and accessibility of recent large models, also known as ``foundation models'', have sparked significant interest and excitement in the research community and beyond. In particular, large pre-trained generative models have demonstrated remarkable competencies in understanding and generating human-like text, images, and more despite being trained on largely unstructured data using relatively simple self-supervised learning methods. This raises the question (A): \textit{Why do such large models work so well?} % for, in
 % instruction following, agentic behaviors
 
 Furthermore, the impressive performance, sometimes even exceeding human experts, across a wide variety of benchmarks together with the incorporation of multiple modalities such as images, text, audio, etc. makes these large models into versatile decision-making systems and agents.
 However, the increased adoption of these models is not without its challenges. The increasing size and complexity of these ``black box'' models raises concerns about their trustworthiness and reliability.
 This is especially pertinent as these models find applications in high-stakes domains such as healthcare and policy-making, where decisions have significant real-world impacts.
-Consequently, we must consider: \textit{Under what circumstances can we trust these large models?} % with, of
+Consequently, we must consider (B): \textit{Under what circumstances can we trust these large models?} % with, of
 
-Enter causality. Causal inference focuses on formalizing such questions and developing tools to answer them in a principled way. For example, by systematically identifying failure modes 
+Enter causality. Causal inference focuses on formalizing questions like A or B, and developing tools to answer them in a principled way. For example, by systematically identifying failure modes 
 % or by isolating the model components that cause problematic behavior 
 we can gain insights into the causal factors that affect the model's behavior. 
-This can lead to more interpretable and explainable models, while also promising to improve model out-of-distribution generalization and robustness by avoiding falling prey to spurious correlations and non-causal biases in the data.
+This can lead to more interpretable and explainable models, while also promising to improve model out-of-distribution generalization and robustness by avoiding spurious correlations and non-causal biases in the data.
 
-Our workshop will explore the many exciting synergies between causality and large models. For instance, how the rich framework of causal inference can be used to make sense of the impressive capabilities of large models. 
-A growing area of research in this direction is to investigate the causal knowledge captured in large models despite being trained on unstructured, observational data. 
-Past similar workshops, such as the Causal Representation Learning workshop at NeurIPS 2023, have strived to make causal methods more accessible to the machine learning community, and we hope to carry on this mission by discussing how a causal framing can enable more principled approaches and potentially even new capabilities such as systematic generalization or robustness. However, we hope to focus on the intersection between causality and large models in particular, as the paradigm shift towards large models has brought new challenges and opportunities that are rife for deeper discussion.
-% For example, how this knowledge is utilized for "amortized causal reasoning" for solving complex tasks.
+Our workshop will explore the many exciting synergies between causality and large models. 
+More specifically, we identify four main directions that we aim to cover in our workshop: 
+% (1) Causality \textit{in} large models, (2) Causality \textit{for} large models, (3) Causality \textit{with} large models, and (4) Causality \textit{of} large models.
+
+% In - Studying the causal knowledge captured by large models
+%   - Evaluating the causal knowledge that emerges out of standard training schemes
+%   - Do LMs do “amortized causality” (Bernhard’s term)?
+%   - Related to: Psychometrics, behavioral sciences
+%   - References: causal parrots, CLadder, Causal Reasoning in LLMs (2305.00050)
+%   - Example application: holistic benchmarking
+%   - Example approach: evaluate model biases with a synthetic benchmark
+% - Of - Understanding the causal structure of how large models work
+%   - Focus is on exploiting the structure of large models to make them more interpretable/controllable
+%   - Related to: Mechanistic interpretability, alignment, neuroscience
+%   - Example application: explainable/trustworthy AI
+%   - Example approach: Identify what components of the model cause problematic behavior
+% - For - Applying causal methods to improve large models
+%   - ML, robustness, generalization, transfer methods
+%   - Explicit or (often) implicit causal assumptions about the model/task
+%   - “Climbing up the ladder” to improve our models
+%   - Example approach: collecting interventional training data
+%   - Example application: debiasing models
+% - With - Leveraging large models to improve causal inference/discovery
+%   - Core contribution is to causal inference/discovery
+%   - How can the high performance of large models be exploited by causal methods?
+%   - References: Can LLMs Build Causal Graphs (2303.05279), …
+%   - Example application: causal discovery using LLMs
+%   - Example approach: leveraging semantics learned in pre-training
+
+\begin{enumerate}
+    \item \textbf{Causality \textit{in} large models}: Assessing the causal knowledge captured by large models. 
+    % A growing area of research in this direction is to investigate the causal knowledge captured in large models despite being trained on unstructured, observational data.
+    % amortized causal inference - causal knowledge *emerges* out of large-scale observational data 
+    % how multiple modalities enable more causal reasoning (?)
+    \item \textbf{Causality \textit{for} large models}: Applying causal methods to improve large models.
+    % Building off of efforts towards causal representation learning, we aim to share ideas on inductive biases inspired/grounded in causality for the large-scale regime
+    \item \textbf{Causality \textit{with} large models}: Leveraging large models to improve causal inference/discovery.
+    % is that recent large models appear to be able to perform some causal reasoning and extract some causal knowledge without deliberate or intended incorporation of causality in their conception.
+    \item \textbf{Causality \textit{of} large models}: Understanding the causal structure of how large models work.
+    % For instance, how the rich framework of causal inference can be used to make sense of the impressive capabilities of large models. 
+
+\end{enumerate}
+
 By engaging both theoretical and applied perspectives, we aim to foster deep insights into the behavior of large models, not only to improve the model's performance but also to make the behavior more interpretable and reliable.
 
-% crystallize emerging subfields
-% 
+% [specific criteria (for call for papers)]
 
-[specific criteria (for call for papers)]
 
-% [list of "selected references"]
+\subsection{Speakers and Schedule}
 
-\section{Schedule and Speakers}
 
 We plan to hold a series of talks given by both up-and-coming as well as distinguished researchers with experience
 
@@ -125,16 +161,34 @@ features a distinguished group of speakers and panelists. We have invited  Matej
 
 [note on diversity]
 
-\subsection{Interactive Elements}
+
+% \subsection{Interactive Elements}
 
 % [equipment needs]
 
 [lunch buddy program] to connect not just junior+senior people for lunch but also connecting different communities
     To connect junior and senior researchers and simultaneously encourage cooperation between the causality and large model communities, we---inspired by the success of a similar initiative at the NeurIPS workshop NeurReps---plan to setup a ``lunch buddy" system between the participants, making our workshop more interactive.
 
-\section{Attendance}
 
-[comparison to CRL]
+\subsection{Relevance and Impact}
+
+Although there have been several past workshops focusing on various aspects of large models in NeurIPS and other major conferences, to our knowledge, there has not been a workshop that specifically focuses on the intersection between causality and large models.
+
+There has been a growing interest in making causality more accessible to the machine learning community, as evidenced by the several past Causal Representation Learning workshops. We hope to carry on this mission by discussing how a causal framing can enable more principled approaches and potentially even new capabilities such as systematic generalization or robustness.
+
+[comparison to CRL] include stats on CRL workshops
+
+% why now? (why is this workshop timely?)
+
+We hope to focus on the intersection between causality and large models in particular, as the paradigm shift towards large models has brought new challenges and opportunities that are rife for deeper discussion.
+
+% Past related workshops, such as the Causal Representation Learning workshop at NeurIPS 2023, have strived to make causal methods more accessible to the machine learning community, and we hope to carry on this mission by discussing how a causal framing can enable more principled approaches and potentially even new capabilities such as systematic generalization or robustness. However, 
+% For example, how this knowledge is utilized for "amortized causal reasoning" for solving complex tasks.
+
+% crystallize emerging subfields
+% 
+
+% [list of "selected references"]
 
 \section{Team}
 
