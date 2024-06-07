@@ -33,8 +33,12 @@
 \usepackage{xcolor}         % colors
 \usepackage{emoji}
 \usepackage[shortlabels]{enumitem}
+\usepackage[para]{footmisc}
 \setlist[itemize]{leftmargin=2em}
 \setlist[enumerate]{leftmargin=2em}
+
+
+\newcommand{\todo}[1]{\textcolor{red}{~TODO: #1}}
 
 
 \title{Proposal for a Workshop on \\
@@ -51,15 +55,16 @@ Causality and Large Models (C\emoji{heart}LM)}
 
 
 \author{%
-    Felix Leeb \thanks{Correspondence: \texttt{calmworkshop2024@gmail.com}} \thanks{Max Planck Institute for Intelligent Systems}
+    Felix Leeb \thanks{Correspondence: \texttt{calmworkshop2024@gmail.com}} 
+    \thanks{Max Planck Institute for Intelligent Systems, Germany}
     \And
-    Ching Lam Choi \footnotemark[1] \thanks{MIT}
+    Ching Lam Choi \footnotemark[1] \thanks{MIT, USA}
     \And
-    Luigi Gresele \thanks{University of Copenhagen}
+    Luigi Gresele \thanks{University of Copenhagen, Denmark}
     \And
     Josef Valvoda \footnotemark[4]
     \And
-    Andrei Nicolicioiu \thanks{Mila}
+    Andrei Nicolicioiu \thanks{Mila, Canada}
     \And
     Xiusi Li \footnotemark[5]
     \And
@@ -67,11 +72,13 @@ Causality and Large Models (C\emoji{heart}LM)}
     \And
     Sophie Xhonneux \footnotemark[5]
     \And
+    Haoxuan Li \thanks{Peking University, China}
+    \And
+    Mengyue Yang \thanks{University College London, UK}
+    \And
     Bernhard Schölkopf \footnotemark[2]
     \And
     Dhanya Sridhar \footnotemark[5]
-    % \And % (waiting for response)
-    % Nichlas Papernot
 }
 
 
@@ -91,18 +98,19 @@ Causality and Large Models (C\emoji{heart}LM)}
 
 \section{Topic}
 
-The remarkable capabilities and accessibility of recent large models, also known as ``foundation models,'' have sparked significant interest and excitement in the research community and beyond. In particular, large pre-trained generative models have demonstrated remarkable competencies in understanding and generating human-like text, images, and more despite being trained on largely unstructured data using relatively simple self-supervised learning objectives. This raises the question: (A) \textit{Why do such large models work so well?} % for, in
+The remarkable capabilities and accessibility of recent large models, also known as ``foundation models,'' have sparked significant interest and excitement in the research community and beyond. In particular, large pre-trained generative models have demonstrated remarkable competencies in understanding and generating human-like text despite being trained on largely unstructured data using relatively simple self-supervised learning objectives. This raises the question: (A) \textit{Why do such large models work so well?} % for, in
 % instruction following, agentic behaviors
 
-The impressive performance, sometimes even exceeding human experts, across a wide variety of benchmarks, together with the incorporation of multiple modalities such as images, text, audio, makes it tempting to regard these large models as versatile decision-making systems.
+The impressive performance, sometimes even exceeding human experts, across a wide variety of benchmarks, together with the incorporation of multiple modalities such as images, text, and audio, makes such large models versatile decision-making systems.
 However, the increased adoption of these models is not without challenges. The increasing size and complexity of these ``black box'' models raises concerns about their trustworthiness and reliability.
-This is especially pertinent in high-stakes domains, such as healthcare and policy-making, where decisions have significant real-world impact.
-Consequently, we must consider: (B) \textit{Under what circumstances can we trust these large models?} and (C) \textit{How can we improve the reliability and trustworthiness of current models?}
+This is especially pertinent in high-stakes domains, such as healthcare and policy-making. %, where decisions have significant real-world impact.
+\todo{The only prudent way for deploying large models in safety-critical scenarios is to understand..}
+Consequently, we must consider: (B) \textit{Under what circumstances can we trust these large models and how can this be improved?} %and (C) \textit{How can we improve the interpretability and reliability of current models?}
 % with, of
+\todo{highlight from the begining that large models are still not rubust enought, especially for distribution shifts. This is the main goal of the first 2 direction from bellow, and it will be good to introduce some relevant questions before. we could point to the fact that our theoretical understanding concerns mostly iid settings - and causality could be a good tool to move to OOD regimes.}
+% (D) \textit{How to make large models more robust?}
 
-(D) \textit{How to make large models more robust?}
-
-Enter causality, a principled framework for predicting a system's behavior under interventions and reasoning over counterfactual scenarios.
+Enter causality: a principled framework for predicting a system's behavior under interventions and reasoning over counterfactual scenarios.
 In high-risk applications, where performance guarantees beyond the training distribution are desirable, causal inference is critical.
 Moreover, causal models explain a system's behavior by elucidating the causal relationships among its components.
 This opens up substantial potential for using causality to address key questions about large models, such as (A), (B), or (C). By leveraging causal inference, we hope to tackle these questions rigorously and enhance our understanding of these powerful models, as well as their reliability and trustworthiness.
@@ -172,7 +180,7 @@ Specifically, we identify four main directions to cover in our workshop:
 
 \end{enumerate}
 
-By engaging both theoretical and applied perspectives, we aim to foster deep insights into the behavior of large models, not only to assess their current capabilities, but also to improve their performance and to make their behavior more interpretable and reliable.
+By engaging both theoretical and applied perspectives, we aim to foster deep insights into the behavior of large models, not only to assess their current capabilities but also to improve their performance and to make their behavior more interpretable and reliable.
 
 % [specific criteria (for call for papers)]
 
@@ -256,16 +264,16 @@ PIs (2): Bernhard Schölkopf [MPI], Dhanya Sridhar [Mila]
 Bio:\\
 
 \href{https://felixludos.com/}{Felix Leeb} 
-is a Ph.D.\ student at the Max Planck Institute for Intelligent Systems in Germany, under the supervision of Bernhard Schölkopf working on causal representation learning and evaluating the reasoning abilities of large language models. Before living in Germany, Felix completed his Bachelors in Physics, Chemistry, and Computer Science at the University of Washington in Seattle, USA, researching object pose estimation visuomotor control and using molecular dynamics simulations to study the structure of cell membranes.
+is a senior Ph.D.\ student at the Max Planck Institute for Intelligent Systems in Germany, under the supervision of Bernhard Schölkopf working on causal representation learning and evaluating the reasoning abilities of large language models. Before living in Germany, Felix completed his Bachelors in Physics, Chemistry, and Computer Science at the University of Washington in Seattle, USA, researching object pose estimation visuomotor control and using molecular dynamics simulations to study the structure of cell membranes.
 
-Ching Lam Choi is an incoming Ph.D.\ student at MIT EECS; she has also spent time with brilliant mentors and peers at Mila, Max Planck Institute for Intelligent Systems, University of Copenhagen, CUHK MMLab and more. Her experiences inspire her to advocate for diverse research participation, via hosting open office hours and co-organising ``New in ML Workshop" at NeurIPS 2023, ``CoSubmitting Summer Workshop" at ICLR 2022, and ``Undergraduates in Computer Vision Social" in ICCV 2021. Her research interests are in responsibly robust scaling, through better synthetic data and causal reasoning capabilities.
+\href{https://chinglamchoi.github.io/cchoi/}{Ching Lam Choi} is an incoming Ph.D.\ student at MIT EECS; she has also spent time with brilliant mentors and peers at Mila, Max Planck Institute for Intelligent Systems, University of Copenhagen, CUHK MMLab and more. Her experiences inspire her to advocate for diverse research participation, via hosting open office hours and co-organising ``New in ML Workshop" at NeurIPS 2023, ``CoSubmitting Summer Workshop" at ICLR 2022, and ``Undergraduates in Computer Vision Social" in ICCV 2021. Her research interests are in responsibly robust scaling, through better synthetic data and causal reasoning capabilities.
 
 \href{https://lgresele.github.io/}{Luigi Gresele}  is a postdoctoral researcher at the University of Copenhagen. His research focuses on the intersection of representation learning and causal inference. Luigi earned his Ph.D.\ from the Max Planck Institute for Intelligent Systems and the University of Tübingen, under the supervision of Bernhard Schölkopf. During his Ph.D.\, he took part in an ELLIS exchange with the Parietal team at Inria-CEA, hosted by Bertrand Thirion and Aapo Hyvärinen, and worked as an Applied Science Intern at Amazon Research Tübingen with Dominik Janzing. He co-organised the 2022 Workshop on Causal Representation Learning (CRL) at UAI Eindhoven, and the 2023 CIFAR and ELLIS Workshop on CRL in T\"ubingen.
 
 
 \href{https://andreinicolicioiu.github.io/}{Andrei Nicolicioiu}
 %Andrei Nicolicioiu
-is a Ph.D.\ student at Mila and Université de Montréal, Canada supervised by Aaron Courville with a Bachelor’s and a Master’s degree from the University Politehnica of Bucharest, Romania. Previously he worked as an ML researcher for 5 years at Bitdefender, Romania, and spent some time at the Max Planck Institute for Intelligent Systems, Germany. His research involves vision-language models with a focus on visual relational reasoning, out-of-distribution generalization and causally inspired representation learning, and data-selection methods.
+is a Ph.D.\ student at Mila and Universit\'{e} de Montr\'{e}al, Canada supervised by Aaron Courville with a Bachelor’s and a Master’s degree from the University Politehnica of Bucharest, Romania. Previously he worked as an ML researcher for 5 years at Bitdefender, Romania, and spent some time at the Max Planck Institute for Intelligent Systems, Germany. His research involves vision-language models with a focus on visual relational reasoning, out-of-distribution generalization and causally inspired representation learning, and data-selection methods.
 
 Xiusi Li is a Master's student at Mila and McGill University supervised by Siamak Ravankbash. She has previously completed her integrated master's degree in Mathematics at the University of Oxford and worked as an ML engineer for 2 years at a biomedical startup in London. Her research interests include causal representation learning and more generally the use of symmetry in machine learning.
 
@@ -278,6 +286,8 @@ Sophie Xhonneux is a Ph.D.\ student at Mila and Universit\'{e} de Montr\'{e}al, 
 Before starting his postdoc, Josef obtained his Ph.D. from the University of Cambridge, where he was co-advised by Ryan Cotterell (ETH) and Simone Teufel (Cambridge).
 His work is focused on formalizing legal reasoning---he has completed his undergraduate degree in Law---as well as the study of neural models through formal language theory.
 He has previously interned as an Applied Scientist at Amazon, ML/AI researcher at Apple and will be joining Google X for a residency this summer.
+
+\href{https://scholar.google.com/citations?user=gtDqiucAAAAJ&hl=en}{Haoxuan Li} is a 
 
 
 [specialized teams and responsibilities]
@@ -292,10 +302,11 @@ He has previously interned as an Applied Scientist at Amazon, ML/AI researcher a
 {\color{blue}[Whenever possible, I would suggest adding at least one reference for each of the invited speakers/panelists/organisers, to showcase that each is a good fit]}
 
 \bibliographystyle{unsrtnat}
+\renewcommand{\bibsection}{}
 \bibliography{refs}
 
-\nocite{liuLargeLanguageModels2024, anwar2024foundational, jin2024cladder, kasetty2024evaluating,park2023linear,zevcevic2023causal,vashishtha2023causal, reizinger2024understanding, gupta2024context_is_env, lampinen2023passive}
-
+\nocite{liuLargeLanguageModels2024, anwar2024foundational, jin2024cladder, kasetty2024evaluating,park2023linear,zevcevic2023causal,vashishtha2023causal, reizinger2024understanding}
+\nocite{gupta2024context_is_env, lampinen2023passive}
 \nocite{daunhawer2023identifiability}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
