@@ -55,30 +55,30 @@ Causality and Large Models (C\emoji{heart}LM)}
 
 
 \author{%
-    Felix Leeb \thanks{Correspondence: \texttt{calmworkshop2024@gmail.com}} 
-    \thanks{Max Planck Institute for Intelligent Systems, Germany}
+    Felix Leeb \mbox{\thanks{Correspondence: \texttt{calmworkshop2024@gmail.com}} 
+    \thanks{Max Planck Institute for Intelligent Systems, Germany}}
     \And
-    Ching Lam Choi \footnotemark[1] \thanks{MIT, USA}
+    Ching Lam Choi  \mbox{\footnotemark[1] \thanks{MIT, USA}}
     \And
-    Luigi Gresele \thanks{University of Copenhagen, Denmark}
+    Luigi Gresele \mbox{\thanks{University of Copenhagen, Denmark}}
     \And
-    Josef Valvoda \footnotemark[4]
+    Josef Valvoda \mbox{\footnotemark[4]}
     \And
-    Andrei Nicolicioiu \thanks{Mila, Canada}
+    Andrei Nicolicioiu \mbox{\thanks{Mila, Canada}}
     \And
-    Xiusi Li \footnotemark[5]
+    Xiusi Li \mbox{\footnotemark[5]}
     \And
-    Patrik Reizinger \footnotemark[2]
+    Patrik Reizinger \mbox{\footnotemark[2]}
     \And
-    Sophie Xhonneux \footnotemark[5]
+    Sophie Xhonneux \mbox{\footnotemark[5]}
     \And
-    Haoxuan Li \thanks{Peking University, China}
+    Haoxuan Li \mbox{\thanks{Peking University, China}}
     \And
-    Mengyue Yang \thanks{University College London, UK}
+    Mengyue Yang \mbox{\thanks{University College London, UK}}
     \And
-    Bernhard Schölkopf \footnotemark[2]
+    Bernhard Schölkopf \mbox{\footnotemark[2]}
     \And
-    Dhanya Sridhar \footnotemark[5]
+    Dhanya Sridhar \mbox{\footnotemark[5]}
 }
 
 
@@ -89,12 +89,12 @@ Causality and Large Models (C\emoji{heart}LM)}
 
 
 \begin{abstract}
-    Our workshop aims to explore the synergies between causality and large models, also known as ``foundation models,'' which have demonstrated remarkable capabilities across multiple modalities (text, images, audio, etc.). Despite their high performance, the opaque nature of these large models raises crucial questions regarding their trustworthiness, especially in safety-critical domains. 
-    A growing community of researchers is turning towards a more principled framework to address these concerns, better understand the behavior of large models, and improve their reliability: causality.
-    % Here to leverage causal inference as a framework to systematically address and enhance the understanding and reliability of these models. 
-    Specifically, this workshop will focus on four directions: causality *in* large models, to assess their causal reasoning abilities, causality *for* improving large models, causality *with* large models to enhance causal inference and discovery methods, and causality *of* large models to understand and control their internal mechanisms. 
-    The invited speakers and panelists (almost all of which have already been confirmed to attend) represent a diverse set of perspectives and expertise, across both academia and industry.
-    The workshop is organized by a team of 12 members from six different institutions across North America, Europe, and Asia, ensuring diversity across research interests, backgrounds, and demographics. Visit our website: \url{https://calm-workshop-2024.github.io/}
+Our workshop aims to explore the synergies between causality and large models, also known as ``foundation models,'' which have demonstrated remarkable capabilities across multiple modalities (text, images, audio, etc.). Despite their high performance, the opaque nature of these large models raises crucial questions regarding their trustworthiness, especially in safety-critical domains. 
+A growing community of researchers is turning towards a more principled framework to address these concerns, better understand the behavior of large models, and improve their reliability: causality.
+% Here to leverage causal inference as a framework to systematically address and enhance the understanding and reliability of these models. 
+Specifically, this workshop will focus on four directions: causality \textit{in} large models, to assess their causal reasoning abilities, causality \textit{for} improving large models, causality \textit{with} large models to enhance causal inference and discovery methods, and causality \textit{of} large models to understand and control their internal mechanisms. 
+The invited speakers and panelists (almost all of which have already been confirmed to attend) represent a diverse set of perspectives and expertise, across both academia and industry.
+The workshop is organized by a team of 12 members from six different institutions across North America, Europe, and Asia, ensuring diversity across research interests, backgrounds, and demographics. Visit our website: \url{https://calm-workshop-2024.github.io/}
 
 % [todo - based on topic section] emphasize this is not just language models
 % \url{https://calm-workshop-2024.github.io/}
@@ -122,7 +122,11 @@ Consequently, we must consider: (B) \textit{Under what circumstances can we trus
 Enter causality: a systematic framework to formalize ``why?'' and ``how?'' questions much like (A) or (B) and develop principled tools to address them.
 Causal inference is a powerful approach to describe a system's behavior under interventions and reason over counterfactual scenarios. 
 % Causal inference offers a systematic approach to understanding the causal relationships among the components of a system, which is crucial for 
-By overcoming spurious correlations and statistical biases, and instead relying on predictive causal relationships, causal models can faithfully explain a system's behavior and enable performance guarantees beyond the training distribution, which is crucial for high-risk applications.
+By %overcoming %and statistical biases, 
+%and 
+relying on stable causal relationships, 
+instead of potentially spurious statistical correlations,
+causal models can transparently elucidate a system's behavior and enable performance guarantees beyond the training distribution, which is crucial for high-risk applications.
 % by elucidating the causal relationships among its components. 
 % This opens up substantial potential for using causality to address key open questions about large models, such as (A) or (B). 
 % By leveraging causal inference, we hope to tackle these questions rigorously and enhance our understanding of these powerful models, as well as their reliability and trustworthiness.
@@ -144,18 +148,6 @@ However, translating the rigorous theoretical tools of causality into practical 
 % Moreover, causal models explain a system's behavior by elucidating the causal relationships among its components.
 % This opens up substantial potential for using causality to address key questions about large models, such as (A), (B), or (C). By leveraging causal inference, we hope to tackle these questions rigorously and enhance our understanding of these powerful models, as well as their reliability and trustworthiness.
 
-\iffalse
-% rigorous
-Enter causality. Causal inference offers a framework to articulate questions like (A), (B), or (C), and provides tools to answer them in a systematic way. 
-{\color{blue}[We believe that this has ... potential for ... addressing critical questions on large models.]}
-It provides a principled framework for predicting a system's behavior under interventions and reasoning over counterfactual scenarios.
-For example, by systematically identifying failure modes 
-we can gain insights into the causal factors that govern the model's behavior.
-This can be crucial 
-{\color{blue}[aims to predict a system's behavior under manipulations or interventions, or in ... counterfactual scenarios ... interpretable and reliable ...]
-On the one hand, [this is desirable in ... high-risk applications such as medical ...]. On the other hand, [it ..., robustness and trustworthiness guarantees].
-]}
-\fi
 % For example, by systematically identifying failure modes 
 % or by isolating the model components that cause problematic behavior 
 % we can gain insights into the causal factors that affect the model's behavior. 
@@ -209,16 +201,16 @@ Specifically, we identify four main directions to cover in our workshop:
 By engaging both theoretical and applied perspectives, we aim to foster deep insights into the behavior of large models, not only to assess their current capabilities but also to improve their performance and to make their behavior more interpretable and reliable. In addition to the directions discussed above, we welcome contributions that explore the vibrant interface between causality and large models, for example:
 
 \begin{itemize}[nolistsep]
-    \item Theoretical and empirical studies on how large models use causal knowledge for reasoning
-    \item Applications of large models to real-world problems leveraging causal methods for improved performance or interpretability 
-    \item Links between multiple modalities (such as images, text, and audio) and (causal) reasoning abilities of large models
-    \item Causal methods that are readily applicable and useful to understanding or improving large models
+    \item Theoretical and empirical studies on how large models employ causal knowledge and reasoning
+    \item Combined applications of large models and causal methods to real-world problems for improved performance and interpretability 
+    \item Connections between multiple modalities (such as images, text, and audio) and (causal) reasoning abilities of large models
+    \item Applications of causal inference methods to understand or improve large models
 \end{itemize}
 
 % [specific criteria (for call for papers)]
 
 
-\subsection{Speakers and Schedule}
+\paragraph{Schedule}
 
 Our workshop will feature a mix of invited talks, a poster session, a panel discussion, and interactive elements to engage the audience and foster discussion. Consequently, we do not expect to need any special equipment.
 We plan to hold a series of six invited talks given by both up-and-coming as well as distinguished researchers with experience in the intersection of causality and large models, as well as a panel discussion for deeper dialogue on the workshop's main themes. Overall, we estimate that our workshop will run for a full day (approximately 8-9 hours), with a preparatory rough breakdown as follows:
@@ -255,14 +247,14 @@ This will provide an opportunity for participants to network and engage in discu
 
 \paragraph{Speakers and Panelists}
 
-All our invited speakers and panelists have confirmed their in-person participation except one~\footnote{Matej Zečević, who is still pending confirmation}.
-We are very encouraged by the enthusiastic reception our proposed workshop has already received from the speakers and panelists we invited, with several speakers expressing their excitement at the topic and the opportunity to engage with the community.
+All our invited speakers and panelists have confirmed their in-person participation except one.\footnote{Matej Zečević, who is still pending confirmation}
+We are very encouraged by the enthusiastic reception our proposed workshop has already received from the speakers and panelists we invited, with several speakers expressing their excitement at the topic. %and the opportunity to engage with the community.
 
 % We are also in the process of finalizing the schedule, which will feature a mix of talks, panel discussions, and interactive elements to engage the audience and foster discussion.
 
 % a great lineup of speakers and panellists from a wide seniority range, including academic and industry experts.
 
-Our confirmed\footnote{All our speakers and panellists have confirmed their participation, except Matej Zečević.} \textit{speakers} are: 
+Our confirmed~\textit{speakers} are:%\footnote{All our speakers and panellists have confirmed their participation, except Matej Zečević.}  
 \href{https://www.janexwang.com/}{Jane X. Wang} (staff research scientist, DeepMind),
 \href{https://www.claudiajshi.com/}{Claudia Shi} (Ph.D.\ student, Columbia University),
 \href{http://victorveitch.com/}{Victor Veitch} (Assistant professor, University of Chicago; research scientist, Google Brain),
@@ -279,7 +271,7 @@ Our confirmed \textit{panellists} are:
 \href{https://zhijing-jin.com/}{Zhijing Jin} (Ph.D.\ student, MPI-IS and ETH Zürich).
 
 
-As our workshop endeavors to bring together two research sub-communities large-scale machine learning and causal inference, we are fortunate to draw our speakers and panelists from diverse backgrounds, demographics, experience, and institutions.
+As our workshop endeavors to bring together two research sub-communities, large-scale machine learning and causal inference, we are fortunate to draw our speakers and panelists from diverse backgrounds, demographics, experience, and institutions.
 We are excited to have a mix of senior and junior researchers, as well as a blend of academic and industry experts, to provide a multi-faceted perspective on causality and large models.
 Additionally, to encourage a more inclusive and diverse environment, we have also selected several notable researchers who focus on adjacent or applied fields to provide our attendees with insights into how state-of-the-art methods can rapidly and effectively be deployed to solve real-world problems.
 
@@ -295,12 +287,12 @@ Additionally, to encourage a more inclusive and diverse environment, we have als
 % [equipment needs]
 
 
-\subsection{Relevance and Impact}
+\paragraph{Relevance and Impact}
 
-Although there have been several past workshops focusing on various aspects of large models in NeurIPS and other major conferences, to our knowledge, there has not been a workshop that specifically focuses on the intersection between causality and large models.
+Although there have been several past workshops focusing on various aspects of large models at NeurIPS and other major conferences, to our knowledge, there has not been a workshop that specifically focuses on the intersection between causality and large models.
 This is particularly unfortunate, given the recent rise of large models leading to an explosion of attention in the research community and beyond. 
 
-However, there has been a growing interest in making causality more accessible to the machine learning community, as evidenced by several past Causal Representation Learning workshops. We hope to carry on this mission by discussing how causal methods can enable more principled approaches and potentially even new capabilities such as systematic generalization or robustness. However, we aim to focus on large models as they represent a paradigm shift in machine learning, not only in terms of performance but also the social implications of their increasingly widespread deployment.
+However, there has been a growing interest in making causality more accessible to the machine learning community and fostering research at the intersection between the two fields, as evidenced by several past Causal Representation Learning workshops. We hope to carry on this mission by discussing how causal methods can enable more principled approaches and potentially even new capabilities such as systematic generalization or robustness. However, we aim to focus on large models as they represent a paradigm shift in machine learning, not only in terms of performance but also the social implications of their increasingly widespread deployment.
 % has brought new challenges and opportunities that are rife for deeper discussion
 
 Since this is the inaugural workshop on this topic, it is difficult to estimate the number of contributions or attendees. However, judging by the 2022 UAI workshop on Causal Representation Learning which had 32 submissions, we expect up to 70 submissions, since NeurIPS is a larger conference, and our workshop involves the trending topic of large models. Estimating the number of attendees is also challenging, but judging by the reception by invited speakers and reviewers, we expect a high interest in the topic, so we estimate upwards of 200 attendees.
@@ -333,7 +325,7 @@ Since this is the inaugural workshop on this topic, it is difficult to estimate 
 
 Our organizing team is very fortunate to benefit from not only considerable experience both in breadth and depth, but also in exceptional diversity in terms of research interests, backgrounds, gender, and demographics. With 12 members spanning six different affiliations across six different countries in North America, Europe, and Asia, we are well-positioned to bring together a diverse set of perspectives and expertise to our workshop.
 
-Despite this commendable diversity, our team is larger than recommended by the NeurIPS guidelines. This is partially due to multiple different groups independently working towards organizing a workshop on this topic, which we decided to merge into a single united effort.
+Despite this commendable diversity, our team is larger than recommended by the NeurIPS guidelines. This is partially due to multiple different groups independently working towards organizing a workshop on this topic, which we decided to merge into a single united effort. All our organizers can devote their full attention to making the workshop rewarding for contributors, speakers, and attendees, as no organizers are additionally organizing on other workshops in parallel.
 However, we believe that for this topic, the size of our team is not only appropriate, but also beneficial. 
 By bringing six institutions together, we have access to a large pool of potential reviewers ensuring that each submission receives at least three quality reviews, enabling us to, by our estimates, already have about one-third of the necessary reviewers confirmed.
 Additionally, our organizing team includes several junior researchers and a high variance in experience organizing workshops in the past. This makes this workshop a unique opportunity for many students to gain valuable experience in organizing a workshop at a major conference.
@@ -372,7 +364,7 @@ He has previously interned as an Applied Scientist at Amazon, ML/AI researcher a
 \href{https://scholar.google.com/citations?user=gtDqiucAAAAJ&hl=en}{Haoxuan Li} is a Ph.D. student in Center for Data Science, Peking University. His research interests span from causal machine learning theory, counterfactual fairness, recommender system debiasing, out-of-distribution generalization, multi-source data fusion, bioinformatics, and large language models. He has published more than 20 papers as first author in top conference
 proceedings, including ICML, NeurIPS, ICLR, SIGKDD, WWW, SIGIR, ICDE, AAAI, and IJCAI, etc., and recieved the NSFC Young Scientists Fund (2024). Moreover, he has been served as the PC member (or area chair) for several top conferences including ICML, NeurIPS, ICLR, SIGKDD, WWW, AAAI, IJCAI, and MM, also the invited reviewer for prestigious journals such as The Innovation, TOIS, TKDE, TKDD, TNNLS, and IPM.
 
-\href{https://ymy4323460.github.io/}{Mengyue Yang} is a Ph.D. student from University College London, supervised by Professor Jun Wang. Her research interests lie in causality, multi-agent systems, reinforcement learning and human-AI coordination. She was co-organizer of the causal representation learning workshop at ICDM 2024 and Competition Causal Structure Learning from Event Sequences and Prior Knowledge at NeruIPS 2023.
+\href{https://ymy4323460.github.io/}{Mengyue Yang} is a Ph.D. student from University College London, supervised by Professor Jun Wang. Her research interests are causality, multi-agent systems, reinforcement learning and human-AI coordination. She was co-organizer of the causal representation learning workshop at ICDM 2024 and Competition Causal Structure Learning from Event Sequences and Prior Knowledge at NeurIPS 2023.
 
 % [specialized teams and responsibilities]
 
@@ -390,7 +382,7 @@ Several of the organizers will serve as area chairs to oversee the reviewing pro
 
 \section{Selected References}
 
-Below we provide a list of selected references for potential attendees and contributors as well as reviewers to get a better understanding of the topics we aim to cover in our workshop. As this is a very active area of research, we expect several pertinent papers to be published in the coming months, so we provide a continuously updating list at our workshop's website: \url{https://calm-workshop-2024.github.io/}
+Below we provide a list of selected references for potential attendees and contributors as well as reviewers to get a better understanding of the topics we aim to cover in our workshop. As this is a very active area of research, we expect several pertinent papers to be published in the coming months, so we will provide a continuously updating list at our workshop's website: \url{https://calm-workshop-2024.github.io/}
 
 % {\color{blue}[Whenever possible, I would suggest adding at least one reference for each of the invited speakers/panelists/organisers, to showcase that each is a good fit]}
 
@@ -398,10 +390,18 @@ Below we provide a list of selected references for potential attendees and contr
 \renewcommand{\bibsection}{}
 \bibliography{refs}
 
-\nocite{liuLargeLanguageModels2024, anwar2024foundational, jin2024cladder, kasetty2024evaluating,park2023linear,zevcevic2023causal,vashishtha2023causal, reizinger2024understanding}
-\nocite{gupta2024context_is_env, lampinen2023passive}
+\nocite{liuLargeLanguageModels2024,
+yang2023critical,
+anwar2024foundational, jin2024cladder, kasetty2024evaluating,park2023linear,geiger2024finding,nie2024moca,zevcevic2023causal,vashishtha2023causal, reizinger2024understanding, willig2022can, xia2021causal, d2022underspecification, long2023causal, rajendran2024learning, jiang2024origins, wang2024concept}
+\nocite{gupta2024context_is_env, lampinen2023passive, wu2024interpretability}
 \nocite{kiciman2023causal}
+\nocite{montagna2024demystifying}
 \nocite{daunhawer2023identifiability}
+\nocite{sanchez2022diffusion}
+\nocite{pan2024counterfactual, li2024steering}
+\nocite{abdulaal2024causal}
+\nocite{richens2024robust}
+\nocite{feder2024causal}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
