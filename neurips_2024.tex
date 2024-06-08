@@ -90,7 +90,7 @@ Causality and Large Models (C\emoji{heart}LM)}
 
 \begin{abstract}
 [todo - based on topic section] emphasize this is not just language models
-\url{https://imur-workshop-test.github.io/}
+\url{https://calm-workshop-2024.github.io/}
 \end{abstract}
 
 
@@ -127,6 +127,15 @@ However, translating the rigorous theoretical tools of causality into practical 
 %, especially in high-risk applications such as medical diagnosis or autonomous driving.
 
 % This opens up substantial potential for using causality to address key open questions about large models. By leveraging causal inference, we hope to tackle these questions rigorously and enhance our understanding of these powerful models, as well as their reliability and trustworthiness.
+
+% \todo{highlight from the begining that large models are still not rubust enought, especially for distribution shifts. This is the main goal of the first 2 direction from bellow, and it will be good to introduce some relevant questions before. we could point to the fact that our theoretical understanding concerns mostly iid settings - and causality could be a good tool to move to OOD regimes.}\todo{Improving the reasoning abilities and reliabilities of the current model. The logit is Why(A) -> What(B) -> How(C), before (C), should we take some examples to make (C) more concrete like: Therefore, it is essential to consider and explore how to systematically improve the reasoning capabilities and reliability of large models from multiple perspectives, including model architecture, algorithm improvements, data diversity, evaluation systems, and transparency.}
+% % (D) \textit{How to make large models more robust?}
+
+% Enter causality: a principled framework for predicting a system's behavior under interventions and reasoning over counterfactual scenarios. \todo{Should we emphasise that:  
+% Causality is a very powerful framework that can help us analyze, evaluate, and enhance the trustworthiness of systems.}
+% In high-risk applications, where performance guarantees beyond the training distribution are desirable, causal inference is critical.
+% Moreover, causal models explain a system's behavior by elucidating the causal relationships among its components.
+% This opens up substantial potential for using causality to address key questions about large models, such as (A), (B), or (C). By leveraging causal inference, we hope to tackle these questions rigorously and enhance our understanding of these powerful models, as well as their reliability and trustworthiness.
 
 \iffalse
 % rigorous
@@ -348,8 +357,10 @@ Before starting his postdoc, Josef obtained his Ph.D. from the University of Cam
 His work is focused on formalizing legal reasoning---he has completed his undergraduate degree in Law---as well as the study of neural models through formal language theory.
 He has previously interned as an Applied Scientist at Amazon, ML/AI researcher at Apple and will be joining Google X for a residency this summer.
 
-\href{https://scholar.google.com/citations?user=gtDqiucAAAAJ&hl=en}{Haoxuan Li} is a 
+\href{https://scholar.google.com/citations?user=gtDqiucAAAAJ&hl=en}{Haoxuan Li} is a Ph.D. student in Center for Data Science, Peking University. His research interests span from causal machine learning theory, counterfactual fairness, recommender system debiasing, out-of-distribution generalization, multi-source data fusion, bioinformatics, and large language models. He has published more than 20 papers as first author in top conference
+proceedings, including ICML, NeurIPS, ICLR, SIGKDD, WWW, SIGIR, ICDE, AAAI, and IJCAI, etc., and recieved the NSFC Young Scientists Fund (2024). Moreover, he has been served as the PC member (or area chair) for several top conferences including ICML, NeurIPS, ICLR, SIGKDD, WWW, AAAI, IJCAI, and MM, also the invited reviewer for prestigious journals such as The Innovation, TOIS, TKDE, TKDD, TNNLS, and IPM.
 
+\href{https://ymy4323460.github.io/}{Mengyue Yang} is a doctoral student from University College London, supervised by Professor Jun Wang. Her research interests lie in causality, multi-agent systems, reinforcement learning and human-AI coordination. She was co-organizer of the causal representation learning workshop at ICDM 2024 and Competition Causal Structure Learning from Event Sequences and Prior Knowledge at NeruIPS 2023.
 
 [specialized teams and responsibilities]
 
@@ -368,6 +379,7 @@ He has previously interned as an Applied Scientist at Amazon, ML/AI researcher a
 
 \nocite{liuLargeLanguageModels2024, anwar2024foundational, jin2024cladder, kasetty2024evaluating,park2023linear,zevcevic2023causal,vashishtha2023causal, reizinger2024understanding}
 \nocite{gupta2024context_is_env, lampinen2023passive}
+\nocite{kiciman2023causal}
 \nocite{daunhawer2023identifiability}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
